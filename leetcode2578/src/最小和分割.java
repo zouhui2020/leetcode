@@ -41,8 +41,8 @@ public class 最小和分割 {
     }
     //冒泡
 //        int[] a ={1,7,4,3,6,8};
-//        for(int i=0; i<a.length; i++){
-//            for (int j=i+1; j<a.length; j++){
+//        for(int i=0; i<a.length-1; i++){
+//            for (int j=0; j<a.length-i-1; j++){
 //                if(a[j-1]>a[j]){
 //                    int temp = a[j-1];
 //                    a[j-1] = a[j];
