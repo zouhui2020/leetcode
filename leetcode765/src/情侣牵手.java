@@ -13,16 +13,26 @@ public class 情侣牵手 {
         return N - unionFind.getCount();
     }
 
-    private static class UnionFind {
+       private static class UnionFind {
 
+        // 父节点数组，记录每个节点的父节点
         private int[] parent;
 
+        // 组成的集合个数
         private int count;
 
+        /**
+         * 获取集合个数
+         * @return 集合个数
+         */
         public int getCount() {
             return count;
         }
 
+        /**
+         * 构造函数
+         * @param n 构造集合的大小
+         */
         public UnionFind(int n) {
             this.count = n;
             this.parent = new int[n];
@@ -31,6 +41,11 @@ public class 情侣牵手 {
             }
         }
 
+        /**
+         * 查找节点所属的集合的根节点
+         * @param x 要查找的节点
+         * @return 根节点
+         */
         public int find(int x) {
             while (x != parent[x]) {
                 parent[x] = parent[parent[x]];
@@ -39,6 +54,11 @@ public class 情侣牵手 {
             return x;
         }
 
+        /**
+         * 合并两个集合
+         * @param x 要合并的节点1
+         * @param y 要合并的节点2
+         */
         public void union(int x, int y) {
             int rootX = find(x);
             int rootY = find(y);
@@ -50,4 +70,5 @@ public class 情侣牵手 {
             count--;
         }
     }
+
 }
