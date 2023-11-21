@@ -5,6 +5,7 @@ public class 最大子数组和 {
 
 //    使用动态规划思想，遍历数组，每次选择前一种子数组的和加上当前元素与当前元素中较大的一个作为新的前缀和，
 //    同时更新最大子数组的和。最后返回最大子数组的和。
+//    思想：当前一个元素大于零时，将其加到现在的元素上
 //    public static int maxSubArray(int[] nums) {
 //        int pre = 0, maxAns = nums[0];
 //        for (int x : nums) {
