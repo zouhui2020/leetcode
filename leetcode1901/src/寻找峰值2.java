@@ -3,7 +3,7 @@ public class 寻找峰值2 {
     public int[] findPeakGrid2(int[][] mat) {
         int left = -1, right = mat.length - 1;
         while (left + 1 < right) {
-            int i = (left + right) >>> 1;
+            int i = (left + right) >>> 1;//无符号右移一位，高位补零，相当于除以二
             int j = indexOfMax(mat[i]);
             if (mat[i][j] > mat[i + 1][j]) {
                 right = i; // 峰顶行号 <= i
