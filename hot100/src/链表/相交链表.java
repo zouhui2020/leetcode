@@ -12,21 +12,32 @@ public class 相交链表 {
             next = null;
         }
     }
-
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        Set<ListNode> visited = new HashSet<ListNode>();
-        ListNode temp = headA;
-        while (temp != null) {
-            visited.add(temp);
-            temp = temp.next;
+        if (headA == null || headB == null) {
+            return null;
         }
-        temp = headB;
-        while (temp != null) {
-            if (visited.contains(temp)) {
-                return temp;
-            }
-            temp = temp.next;
+        ListNode pA = headA, pB = headB;
+        while (pA != pB) {
+            pA = pA == null ? headB : pA.next;
+            pB = pB == null ? headA : pB.next;
         }
-        return null;
+        return pA;
     }
+
+//    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+//        Set<ListNode> visited = new HashSet<ListNode>();
+//        ListNode temp = headA;
+//        while (temp != null) {
+//            visited.add(temp);
+//            temp = temp.next;
+//        }
+//        temp = headB;
+//        while (temp != null) {
+//            if (visited.contains(temp)) {
+//                return temp;
+//            }
+//            temp = temp.next;
+//        }
+//        return null;
+//    }
 }
