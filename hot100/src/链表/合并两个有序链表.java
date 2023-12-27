@@ -31,7 +31,7 @@ public class 合并两个有序链表 {
             return list2;
         }
     }
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
         ListNode head = new ListNode(-1);
         ListNode cur = head;
         while (list1!= null && list2!= null) {
