@@ -3,7 +3,24 @@ import java.util.Set;
 
 public class 无重复字符最长字符串 {
     public static void main(String[] args) {
+        System.out.println(test());;
+    }
 
+    public static int test() {
+        int a = 1;
+        try {
+            a=a/0;
+            return a;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            a=2;
+            return a;
+        }
+        finally {
+            a = 3;
+//            return a;
+        }
     }
 
     public static int lengthOfLongestSubstring(String s) {
