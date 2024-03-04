@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class 受限条件下可达节点的数目 {
     int cnt = 0;
 
